@@ -19,4 +19,4 @@ shape = SubResource("RectangleShape2D_o5qli")
 debug_color = Color(0.105882354, 0.47843137, 0, 0.41960785)
 
 [node name="Enemy" parent="." instance=ExtResource("2_0wfyh")]
-position = Vector2(1492, 191)
+position = Vector2(880, 142)
