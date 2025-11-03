@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://d11sg4eshns0e"]
+
+[ext_resource type="Script" uid="uid://ckgmwtx3nmtuh" path="res://scripts/enemy.gd" id="1_p7g5j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7g5j"]
+size = Vector2(30, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7g5j"]
+bg_color = Color(0.09366939, 0.09366939, 0.09366933, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqhw6"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_p7g5j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_p7g5j")
+debug_color = Color(0.86718446, 0.35121894, 0.12739846, 0.41960785)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+show_behind_parent = true
+top_level = true
+offset_left = -50.0
+offset_top = -67.0
+offset_right = 50.0
+offset_bottom = -55.0
+theme_override_styles/background = SubResource("StyleBoxFlat_p7g5j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pqhw6")
+max_value = 50.0
+value = 30.0
+show_percentage = false
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -60)

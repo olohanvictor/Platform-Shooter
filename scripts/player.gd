@@ -1,0 +1,42 @@
+extends CharacterBody2D
+
+var bullet_scene = preload("res://entities/bullet.tscn")
+@onready var sprite = $Sprite2D
+
+const spd = 700.0
+const jump = -700.0
+const gravity = 1200.0
+
+func _physics_process(delta):
+	var velocity = self.velocity
+	
+	# Horizontal
+	var horizontal = Input.get_axis("left", "right")
+	if horizontal != 0:
+		sprite.flip_h = horizontal < 0
+
+	velocity.x = horizontal * spd
+	
+	
+	# Gravidade e pulo
+	if not is_on_floor():
+		velocity.y += gravity * delta
+	else:
+		if Input.is_action_just_pressed("jump"):
+			velocity.y = jump
+	
+	# Aplica movimento
+	self.velocity = velocity
+	
+	#Atirando
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+
+	move_and_slide()
+
+	
+func shoot():
+	var bullet = bullet_scene.instantiate()
+	bullet.position = $Marker2D.global_position
+	bullet.direction = -1 if sprite.flip_h else 1
+	get_parent().add_child(bullet)
