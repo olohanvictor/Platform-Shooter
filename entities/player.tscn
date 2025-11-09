@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cnxwiyvwnmxy1" path="res://scripts/player.gd" id="1_merdl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3f3p"]
-size = Vector2(30, 30)
+size = Vector2(31.999998, 31.999998)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_merdl"]
 bg_color = Color(0.09366939, 0.09366939, 0.09366933, 1)
@@ -17,7 +17,8 @@ script = ExtResource("1_merdl")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(2.5, 2.5)
+position = Vector2(-4.7683716e-07, -5.9604645e-07)
+scale = Vector2(2.3, 2.3)
 shape = SubResource("RectangleShape2D_u3f3p")
 
 [node name="Camera2D" type="Camera2D" parent="."]

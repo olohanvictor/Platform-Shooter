@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://i42t6wh22l26"]
+
+[ext_resource type="Script" uid="uid://b3ns4y6r88gx0" path="res://scripts/damageindicator.gd" id="1_xkfd4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xkfd4"]
+font_size = 22
+font_color = Color(1, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="DamageIndicator" type="RigidBody2D"]
+script = ExtResource("1_xkfd4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -6.0
+offset_top = -16.0
+offset_right = 13.0
+offset_bottom = 49.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_xkfd4")
+
+[node name="Timer" type="Timer" parent="."]

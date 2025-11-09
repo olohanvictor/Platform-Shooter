@@ -1,22 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsklcudekxufb"]
 
-[ext_resource type="PackedScene" uid="uid://dlmd6m2oqi7sn" path="res://entities/player.tscn" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://d11sg4eshns0e" path="res://entities/enemy.tscn" id="2_0wfyh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
-size = Vector2(2484, 99.5)
+[ext_resource type="PackedScene" uid="uid://dlmd6m2oqi7sn" path="res://entities/player.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://d3mrqoo2xplrm" path="res://entities/ground.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://d11sg4eshns0e" path="res://entities/enemy.tscn" id="3_tbgi4"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(365, 12)
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_sugp2")]
+position = Vector2(-348, -173)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Ground" parent="." instance=ExtResource("2_jyhfs")]
+position = Vector2(505, 572)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(761, 612.25)
-shape = SubResource("RectangleShape2D_o5qli")
-debug_color = Color(0.105882354, 0.47843137, 0, 0.41960785)
-
-[node name="Enemy" parent="." instance=ExtResource("2_0wfyh")]
-position = Vector2(1492, 191)
+[node name="Enemy" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(1205, -281)
