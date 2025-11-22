@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfc3drsrew47b"]
+
+[ext_resource type="Script" uid="uid://caodwgwft8kvx" path="res://scripts/bulletenemy.gd" id="1_rl82u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hht6g"]
+
+[node name="Area2D" type="Area2D" groups=["enemies", "enemy_bullet"]]
+script = ExtResource("1_rl82u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hht6g")
+debug_color = Color(0.9764706, 0, 0, 0.41960785)

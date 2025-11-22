@@ -7,6 +7,6 @@
 [node name="Area2D" type="Area2D" groups=["bullet", "enemies"]]
 script = ExtResource("1_cqqv6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["bullet"]]
 shape = SubResource("CircleShape2D_hht6g")
-debug_color = Color(0.74615467, 0.20242506, 0.9999998, 0.41960785)
+debug_color = Color(0.5685941, 0.0023062332, 0.81147623, 0.41960785)
