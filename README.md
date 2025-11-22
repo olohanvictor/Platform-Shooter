@@ -17,3 +17,6 @@ This project doesn’t have sprites. So, enable ‘Visible Collision Shapes’ i
 - Enemies now deal damage
 - Added visual feedback for damage dealt and received
 
+### Fourth Commit
+- Enemies are now alive! The state machine has been added, and with that, 3 new states come: beserk, attack, and defense.
+
